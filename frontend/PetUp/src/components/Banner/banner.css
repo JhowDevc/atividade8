@@ -1,0 +1,24 @@
+
+
+.banner{
+background-image:linear-gradient(
+    to right bottom,
+    rgba(0, 0, 0, 0.4), /* Cor preta com opacidade */
+    rgba(0, 0, 0, 0.9)  /* Aumento da opacidade para dar mais escurecimento */
+  ),  url('../../assets/banner.png');
+background-size: cover; /* A imagem vai cobrir todo o elemento */
+background-position: center; /* A imagem ficará centralizada */
+background-repeat: no-repeat;
+height: 60vh; /* Isso faz a altura do elemento ocupar 100% da altura da tela */
+
+}
+
+.text-banner{
+    position: a; /* Faz o texto ficar sobre o fundo */
+    color:white;
+   
+}
+
+h1{
+  color: white !important;
+}

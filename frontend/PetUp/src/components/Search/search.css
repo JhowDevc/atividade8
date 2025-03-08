@@ -1,0 +1,82 @@
+
+h2{
+  font-size: 2.5rem;
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    
+    background-color: #F4A261; /* Laranja */
+   
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+    
+  }
+  
+  .search-bar input {
+    width: 60%; /* Largura do campo de texto */    
+    border: 2px solid #074051; /* Azul escuro */
+    border-radius: 5px;
+    
+    color: #074051; /* Azul escuro para o texto */
+    background-color: white;
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar input:focus {
+    border-color: #F4A261; /* Laranja quando o campo estiver em foco */
+    outline: none;
+  }
+  
+  /* Estilo para o select (dropdown) */
+  .search-bar select {
+    padding: 10px;
+    border: 2px solid #074051; /* Azul escuro */
+    border-radius: 5px;
+    background-color: white;
+
+    color: #074051; /* Azul escuro */
+    transition: border-color 0.3s ease;
+  }
+  
+  .search-bar select:focus {
+    border-color: #F4A261; /* Laranja quando o select estiver em foco */
+    outline: none;
+  }
+  
+  /* Botão de busca */
+  .search-bar button {
+    background-color: #074051; /* Azul escuro */
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+   
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .search-bar button:hover {
+    background-color: black; /* Fundo preto no hover */
+    transform: scale(1.05); /* Efeito de aumento no botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+  
+
+  /* Wrapper full-width para o fundo do Search */
+.search-wrapper {
+  width: 100%;
+  background-color: #ffffff; /* Fundo para tema claro */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fundo para o tema escuro */
+body[data-theme="dark"] .search-wrapper {
+  background-color: #121212; /* Fundo escuro */
+  color: #f5f5f5;
+}
+
+/* Tornando o fundo do section transparente para não sobrescrever o wrapper */
+section.search {
+  background-color: transparent;
+}

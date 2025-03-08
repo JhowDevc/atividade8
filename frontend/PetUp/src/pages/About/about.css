@@ -1,0 +1,119 @@
+/* Estilos padrão para o modo claro (padrão) */
+
+/* Container principal e textos */
+.about-container {
+    max-width: 1200px;
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+.text-dark {
+    color: #000 !important;
+}
+
+.text-muted {
+    color: #6c757d !important;
+}
+
+.text-primary {
+    color: #007bff !important;
+}
+
+/* Call to Action */
+.bg-light {
+    background-color: #f8f9fa !important;
+}
+
+/* Outros estilos existentes permanecem... */
+/* (Inclua aqui os estilos que você já tem para header, cards, equipe, CTA, etc.) */
+
+/* Shadow Box para os cards - Modo Claro */
+.card {
+    background-color: #ffffff;
+    color: #000;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px !important;
+    transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* Classes únicas para os cards da seção About com efeito de zoom out */
+.about-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.about-card:hover {
+    transform: scale(0.95);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+}
+
+/* -------------------------------------------------------- */
+/* Dark Mode Overrides */
+/* -------------------------------------------------------- */
+body[data-theme="dark"] {
+    background-color: #121212;
+    color: #f5f5f5;
+}
+
+/* Altera as classes de texto para melhor contraste */
+body[data-theme="dark"] .text-dark {
+    color: #f5f5f5 !important;
+}
+
+body[data-theme="dark"] .text-muted {
+    color: #cccccc !important;
+}
+
+body[data-theme="dark"] .text-primary {
+    color: #66b0ff !important;
+}
+
+/* Ajuste o fundo dos elementos que usam bg-light */
+body[data-theme="dark"] .bg-light {
+    background-color: #1c1c1c !important;
+}
+
+/* Cards: ajuste o fundo, cor do texto e Shadow Box no modo escuro */
+body[data-theme="dark"] .card {
+    background-color: #1c1c1c;
+    color: #f5f5f5;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.15);
+    transition: box-shadow 0.3s ease;
+}
+
+body[data-theme="dark"] .card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.25);
+}
+
+/* Aplicando overrides para as classes únicas dos cards no modo escuro */
+body[data-theme="dark"] .about-card:hover {
+    box-shadow: 0 8px 16px rgba(255, 255, 255, 0.25);
+}
+
+/* Botões primários */
+body[data-theme="dark"] .btn-primary {
+    background-color: #66b0ff;
+    border-color: #66b0ff;
+}
+
+body[data-theme="dark"] .btn-primary:hover {
+    background-color: #3388cc;
+}
+
+/* Ícones e outros elementos */
+
+
+/* Seção "Call to Action" */
+body[data-theme="dark"] .about-cta-section {
+    background-color: #1c1c1c;
+}
+
+body[data-theme="dark"] .about-cta-title {
+    color: #66b0ff;
+}
+
+body[data-theme="dark"] .about-cta-text {
+    color: #cccccc;
+}

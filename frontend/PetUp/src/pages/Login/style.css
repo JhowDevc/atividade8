@@ -1,0 +1,132 @@
+.login {
+    display: flex;
+    align-items: center;
+    padding-top: 100px;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1 {
+    font-size: 32px;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px;
+    border-radius: 30px;
+    max-width: 90%;
+    width: 400px;
+    margin-bottom: 25px;
+    background-color: #F4A261;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+form input {
+    display: block;
+    border: 1px solid gray;
+    border-radius: 30px;
+    height: 40px;
+    padding-left: 20px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+form input:focus {
+    border-color: #074051;
+    box-shadow: 0 0 5px rgba(7, 64, 81, 0.3);
+}
+
+form input:invalid:focus {
+    border-color: #e63946;
+}
+
+form button {
+    background-color: #074051;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+form button:hover:not(:disabled) {
+    background-color: black;
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+form button:disabled {
+    background-color: #a1b5ba;
+    cursor: not-allowed;
+    transform: none;
+}
+
+.terms {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: #333;
+}
+
+.terms a,
+.link a {
+    color: #074051;
+    text-decoration: none;
+}
+
+.terms a:hover,
+.link a:hover {
+    text-decoration: underline;
+}
+
+.link {
+    text-align: center;
+    font-size: 14px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.error {
+    color: #e63946;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.success {
+    color: #2a9d8f;
+    text-align: center;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+
+    form {
+        padding: 20px;
+        gap: 15px;
+    }
+
+    form input,
+    form button {
+        font-size: 14px;
+    }
+
+    .terms,
+    .link {
+        font-size: 12px;
+    }
+}

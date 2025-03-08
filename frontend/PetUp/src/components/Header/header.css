@@ -1,0 +1,58 @@
+.header {
+    background-color: #F4A261;
+  }
+
+.nav{
+    color: black;
+    font-weight: 500;
+  }
+
+li:hover{
+    color: black;
+    font-weight: bold;
+  }
+
+ a{
+    text-decoration: none;
+    color: black 
+ }
+  .login-btn {
+    background-color: #074051;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+
+  .login-btn:hover {
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    transform: scale(1.05); /* Efeito de aumento no botão */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  }
+ 
+
+   /* Estilo para tema escuro */
+   body[data-theme="dark"] header {
+    background-color: black;  /* Cor mais escura para manter a identidade visual */
+    color: #f5f5f5;
+    font-weight: 500;
+
+    &&
+
+    a{
+        color: #f5f5f5;
+    
+      }
+
+      
+  a:hover {
+    font-weight: bold;
+    color: #f5f5f5;
+  }
+  
+    
+  }
+  

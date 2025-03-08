@@ -1,0 +1,177 @@
+/* Container principal */
+.add-pet-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 40px 20px;
+    background-color: #f8f9fa;
+  }
+  
+  /* Header e subheader */
+  .add-pet-header {
+    color: black !important;
+    font-size: 2.8rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .add-pet-subheader {
+    color: #6c757d;
+    font-size: 1.2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+  
+  /* Wrapper do formulário */
+  .add-pet-form-wrapper {
+    padding: 30px;
+    background-color: #F4A261;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .add-pet-form-wrapper:hover {
+    transform: translateY(-5px);
+  }
+  
+  /* Formulário */
+  .add-pet-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 100%;
+    max-width: 500px;
+    box-shadow: none !important;
+  }
+  
+  /* Grupos do formulário */
+  .form-group-custom {
+    margin-bottom: 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-control-custom {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ced4da;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    flex-grow: 1;
+  }
+  
+  .form-control-custom:focus {
+    border-color: #F4A261;
+    box-shadow: 0 0 0 0.2rem rgba(244, 162, 97, 0.25);
+    outline: none;
+  }
+  
+  .form-control-custom::placeholder {
+    color: #adb5bd;
+  }
+  
+  /* Botão de envio */
+  .add-pet-submit-button {
+    background-color: #074051;
+    border: none;
+    padding: 0.8rem;
+    font-size: 1.1rem;
+    color: #ffffff;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .add-pet-submit-button:hover {
+    background-color: #052f3b;
+    transform: scale(1.05);
+  }
+  
+  .add-pet-submit-button:disabled {
+    background-color: #6c757d;
+    cursor: not-allowed;
+  }
+  
+  /* Mensagens de sucesso e erro */
+  .add-pet-success-message,
+  .add-pet-error-message {
+    margin-top: 1rem;
+    padding: 1rem;
+    border-radius: 6px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  /* Animação de entrada */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards;
+  }
+  
+  /* Tema escuro */
+  body[data-theme="dark"] .add-pet-container {
+    background-color: black;
+  }
+  
+  body[data-theme="dark"] .add-pet-header {
+    color: #F4A261;
+  }
+  
+  body[data-theme="dark"] .add-pet-subheader {
+    color: #adb5bd;
+  }
+  
+  body[data-theme="dark"] .add-pet-form-wrapper {
+    background-color: black;
+  }
+  
+  body[data-theme="dark"] .form-control-custom {
+    background-color: white;
+    border-color: #444;
+    color: #f5f5f5;
+  }
+  
+  body[data-theme="dark"] .form-control-custom::placeholder {
+    color: #888;
+  }
+  
+  /* Responsividade */
+  @media (max-width: 768px) {
+    .add-pet-header {
+      font-size: 2rem;
+    }
+  
+    .add-pet-subheader {
+      font-size: 1rem;
+    }
+  
+    .add-pet-form-wrapper {
+      padding: 20px;
+    }
+  
+    .add-pet-submit-button {
+      padding: 0.6rem;
+    }
+  }
+  
+  .min-vh-75 {
+    min-height: 75vh;
+  }
