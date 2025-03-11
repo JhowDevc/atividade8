@@ -1,72 +1,66 @@
-
-h2{
+h2 {
   font-size: 2.5rem;
+  font-weight: 700;
+  color: #074051; /* Azul escuro no tema claro */
 }
 
 /* Barra de pesquisa */
 .search-bar {
-    
-    background-color: #F4A261; /* Laranja */
-   
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
-    
-  }
-  
-  .search-bar input {
-    width: 60%; /* Largura do campo de texto */    
-    border: 2px solid #074051; /* Azul escuro */
-    border-radius: 5px;
-    
-    color: #074051; /* Azul escuro para o texto */
-    background-color: white;
-    transition: border-color 0.3s ease;
-  }
-  
-  .search-bar input:focus {
-    border-color: #F4A261; /* Laranja quando o campo estiver em foco */
-    outline: none;
-  }
-  
-  /* Estilo para o select (dropdown) */
-  .search-bar select {
-    padding: 10px;
-    border: 2px solid #074051; /* Azul escuro */
-    border-radius: 5px;
-    background-color: white;
+  background-color: #F4A261; /* Laranja */
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Sombras suaves */
+}
 
-    color: #074051; /* Azul escuro */
-    transition: border-color 0.3s ease;
-  }
-  
-  .search-bar select:focus {
-    border-color: #F4A261; /* Laranja quando o select estiver em foco */
-    outline: none;
-  }
-  
-  /* Botão de busca */
-  .search-bar button {
-    background-color: #074051; /* Azul escuro */
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-   
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
-  
-  .search-bar button:hover {
-    background-color: black; /* Fundo preto no hover */
-    transform: scale(1.05); /* Efeito de aumento no botão */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  }
-  
+.search-bar input {
+  width: 60%; /* Largura do campo de texto */
+  border: 2px solid #074051; /* Azul escuro */
+  border-radius: 5px;
+  color: #074051; /* Azul escuro para o texto */
+  background-color: white;
+  transition: border-color 0.3s ease;
+}
 
-  /* Wrapper full-width para o fundo do Search */
+.search-bar input:focus {
+  border-color: #F4A261; /* Laranja quando o campo estiver em foco */
+  outline: none;
+}
+
+/* Estilo para o select (dropdown) */
+.search-bar select {
+  padding: 10px;
+  border: 2px solid #074051; /* Azul escuro */
+  border-radius: 5px;
+  background-color: white;
+  color: #074051; /* Azul escuro */
+  transition: border-color 0.3s ease;
+}
+
+.search-bar select:focus {
+  border-color: #F4A261; /* Laranja quando o select estiver em foco */
+  outline: none;
+}
+
+/* Botão de busca */
+.search-bar button {
+  background-color: #074051; /* Azul escuro */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.search-bar button:hover {
+  background-color: black; /* Fundo preto no hover */
+  transform: scale(1.05); /* Efeito de aumento no botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+/* Wrapper full-width para o fundo do Search */
 .search-wrapper {
   width: 100%;
-  background-color: #ffffff; /* Fundo para tema claro */
+  background-color: #e4d5d5; /* Fundo para tema claro */
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
@@ -79,4 +73,224 @@ body[data-theme="dark"] .search-wrapper {
 /* Tornando o fundo do section transparente para não sobrescrever o wrapper */
 section.search {
   background-color: transparent;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+/* Seção "Conheça o Projeto" */
+.about-project-section {
+  padding: 40px 20px; /* Mesmo padding das outras páginas */
+  margin-top: 50px; /* Espaço acima da seção */
+  max-width: 1000px; /* Largura maior, mas sem fundo diferente */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Título da seção */
+.about-project-title {
+  font-size: 2.8rem; /* Mesmo tamanho de AddPet e Contact */
+  font-weight: 700;
+  color: #074051; /* Azul escuro no tema claro */
+  margin-bottom: 1rem; /* Mesmo espaçamento de AddPet */
+}
+
+/* Texto principal da seção */
+.about-project-text {
+  font-size: 1.2rem; /* Mesmo tamanho de AddPet e Contact */
+  color: #6c757d; /* Cinza das outras páginas */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Destaques da seção */
+.about-project-highlights {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.highlight-item {
+  font-size: 1.1rem; /* Tamanho consistente com botões */
+  color: #333; /* Cinza escuro no tema claro */
+  display: flex;
+  align-items: center;
+}
+
+.highlight-item i {
+  font-size: 1.2rem;
+  margin-right: 10px;
+  color: #074051; /* Azul escuro no tema claro */
+}
+
+/* Texto final da seção */
+.about-project-footer {
+  font-size: 1.2rem; /* Mesmo tamanho de AddPet e Contact */
+  color: #6c757d; /* Cinza das outras páginas */
+  margin-bottom: 2rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botão da seção */
+.about-project-btn {
+  display: inline-block;
+  background-color: #074051;
+  color: white;
+  text-decoration: none;
+  padding: 0.8rem 2rem; /* Mesmo tamanho de AddPet e Contact */
+  font-size: 1.1rem; /* Mesmo tamanho de AddPet e Contact */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.about-project-btn:hover {
+  background-color: black;
+  transform: scale(1.05);
+  color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Animação de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px); /* Mesmo deslocamento de AddPet */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards; /* Mesmo tempo de AddPet */
+}
+
+/* Tema escuro */
+body[data-theme="dark"] .search-wrapper {
+  background-color: #121212; /* Fundo escuro */
+}
+
+body[data-theme="dark"] .search h2 {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .search-bar {
+  background-color: #074051; /* Azul escuro no tema escuro */
+}
+
+body[data-theme="dark"] .search-bar input {
+  background-color: white;
+  border-color: #444;
+  color: #074051;
+}
+
+body[data-theme="dark"] .search-bar select {
+  background-color: white;
+  border-color: #444;
+  color: #074051;
+}
+
+body[data-theme="dark"] .search-bar select option {
+  color: #074051;
+  background-color: white;
+}
+
+body[data-theme="dark"] .search-bar button {
+  background-color: #F4A261; /* Laranja no tema escuro */
+  color: #074051;
+}
+
+body[data-theme="dark"] .search-bar button:hover {
+  background-color: #e68a4c; /* Tom mais claro de laranja */
+}
+
+body[data-theme="dark"] .about-project-title {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .about-project-text {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .about-project-highlights {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .highlight-item {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .highlight-item i {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .about-project-footer {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .about-project-btn {
+  background-color: #F4A261; /* Laranja no tema escuro */
+  color: #074051;
+}
+
+body[data-theme="dark"] .about-project-btn:hover {
+  background-color: #e68a4c; /* Tom mais claro de laranja */
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  h2 {
+    font-size: 2rem;
+  }
+
+  .search-bar {
+    padding: 15px;
+  }
+
+  .search-bar input,
+  .search-bar select {
+    margin-bottom: 10px;
+    width: 100%;
+  }
+
+  .about-project-section {
+    padding: 20px; /* Mesmo padding reduzido de AddPet */
+  }
+
+  .about-project-title {
+    font-size: 2rem; /* Mesmo tamanho de AddPet em mobile */
+  }
+
+  .about-project-text {
+    font-size: 1rem; /* Mesmo tamanho de AddPet em mobile */
+  }
+
+  .about-project-highlights {
+    gap: 0.8rem;
+  }
+
+  .highlight-item {
+    font-size: 1rem;
+  }
+
+  .about-project-footer {
+    font-size: 1rem; /* Mesmo tamanho de AddPet em mobile */
+  }
+
+  .about-project-btn {
+    padding: 0.6rem 1.5rem; /* Ajustado para mobile */
+    font-size: 1rem;
+  }
 }

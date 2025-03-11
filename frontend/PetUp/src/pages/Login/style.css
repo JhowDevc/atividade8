@@ -4,129 +4,241 @@
     padding-top: 100px;
     flex-direction: column;
     min-height: 100vh;
-}
-
-h1 {
-    font-size: 32px;
+    background-color: #ffffff; /* Fundo claro padrão */
+    transition: background-color 0.3s ease;
+  }
+  
+  .back-to-home {
+    font-size: 1.1rem; /* Mesmo tamanho dos botões */
+    color: #074051; /* Azul escuro no tema claro */
+    text-decoration: none;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .back-to-home:hover {
+    color: #052f3b; /* Tom mais escuro de azul */
+    transform: translateX(-5px); /* Efeito de mover para a esquerda */
+    text-decoration: underline;
+  }
+  
+  .back-to-home i {
+    font-size: 1.2rem; /* Ícone um pouco maior */
+  }
+  
+  .login-title {
+    font-size: 2.8rem; /* Mesmo tamanho de AddPet e Contact */
+    font-weight: 700;
     text-align: center;
-    margin-bottom: 20px;
-    color: #333;
-}
-
-form {
+    margin-bottom: 1rem;
+    color: #074051; /* Azul escuro no tema claro */
+  }
+  
+  .login-subtitle {
+    font-size: 1.2rem; /* Mesmo tamanho de subtítulos em outras páginas */
+    text-align: center;
+    color: #6c757d; /* Cinza consistente */
+    margin-bottom: 2rem;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+  
+  .login-form {
     display: flex;
     flex-direction: column;
     gap: 20px;
     padding: 30px;
-    border-radius: 30px;
+    border-radius: 15px; /* Bordas mais suaves */
     max-width: 90%;
     width: 400px;
     margin-bottom: 25px;
-    background-color: #F4A261;
+    background-color: #F4A261; /* Fundo laranja */
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-}
-
-form input {
+    transition: transform 0.3s ease;
+  }
+  
+  .login-form:hover {
+    transform: translateY(-5px); /* Efeito de elevação ao passar o mouse */
+  }
+  
+  .login-form input {
     display: block;
-    border: 1px solid gray;
+    border: 1px solid #ced4da; /* Borda cinza padrão */
     border-radius: 30px;
     height: 40px;
     padding-left: 20px;
-    font-size: 16px;
+    font-size: 1rem;
     outline: none;
-    transition: border-color 0.3s ease;
-}
-
-form input:focus {
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
+  }
+  
+  .login-form input:focus {
     border-color: #074051;
     box-shadow: 0 0 5px rgba(7, 64, 81, 0.3);
-}
-
-form input:invalid:focus {
+  }
+  
+  .login-form input:invalid:focus {
     border-color: #e63946;
-}
-
-form button {
+  }
+  
+  .login-form button {
     background-color: #074051;
     color: white;
     border: none;
-    border-radius: 5px;
-    padding: 12px;
-    font-size: 16px;
+    border-radius: 6px; /* Alinhado com outras páginas */
+    padding: 0.8rem; /* Mesmo tamanho de AddPet */
+    font-size: 1.1rem; /* Mesmo tamanho de AddPet */
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-form button:hover:not(:disabled) {
+    transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+  }
+  
+  .login-form button:hover:not(:disabled) {
     background-color: black;
     transform: scale(1.05);
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-form button:disabled {
+  }
+  
+  .login-form button:disabled {
     background-color: #a1b5ba;
     cursor: not-allowed;
     transform: none;
-}
-
-.terms {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    font-size: 14px;
-    color: #333;
-}
-
-.terms a,
-.link a {
-    color: #074051;
-    text-decoration: none;
-}
-
-.terms a:hover,
-.link a:hover {
-    text-decoration: underline;
-}
-
-.link {
+  }
+  
+  .link {
     text-align: center;
-    font-size: 14px;
+    font-size: 1rem; /* Ajustado para consistência */
     color: #333;
     margin-top: 10px;
-}
-
-.error {
+  }
+  
+  .link a {
+    color: #074051;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .link a:hover {
+    color: #052f3b; /* Tom mais escuro de azul */
+    text-decoration: underline;
+  }
+  
+  .error {
     color: #e63946;
     text-align: center;
     margin-top: 10px;
-    font-size: 14px;
-}
-
-.success {
-    color: #2a9d8f;
+    font-size: 1rem; /* Ajustado para consistência */
+    background-color: rgba(230, 57, 70, 0.1);
+    padding: 8px;
+    border-radius: 6px;
+  }
+  
+  .login-footer {
+    font-size: 1.2rem; /* Mesmo tamanho de subtítulos */
     text-align: center;
-    margin-top: 10px;
-    font-size: 14px;
-}
-
-/* Responsividade */
-@media (max-width: 480px) {
-    h1 {
-        font-size: 28px;
+    color: #6c757d; /* Cinza consistente */
+    margin-top: 2rem;
+    max-width: 500px;
+    line-height: 1.6;
+  }
+  
+  /* Animação de entrada */
+  @keyframes slideIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
     }
-
-    form {
-        padding: 20px;
-        gap: 15px;
+    to {
+      opacity: 1;
+      transform: translateY(0);
     }
-
-    form input,
-    form button {
-        font-size: 14px;
+  }
+  
+  .animate-slide-in {
+    animation: slideIn 0.5s ease-out forwards; /* Mesmo efeito de outras páginas */
+  }
+  
+  /* Tema escuro */
+  body[data-theme="dark"] .login {
+    background-color: #121212; /* Fundo escuro */
+  }
+  
+  body[data-theme="dark"] .back-to-home {
+    color: #F4A261; /* Laranja no tema escuro */
+  }
+  
+  body[data-theme="dark"] .back-to-home:hover {
+    color: #e68a4c; /* Tom mais claro de laranja */
+  }
+  
+  body[data-theme="dark"] .login-title {
+    color: #F4A261; /* Laranja no tema escuro */
+  }
+  
+  body[data-theme="dark"] .login-subtitle {
+    color: #adb5bd; /* Cinza claro no tema escuro */
+  }
+  
+  body[data-theme="dark"] .login-form {
+    background-color: #074051; /* Azul escuro no tema escuro */
+  }
+  
+  body[data-theme="dark"] .login-form input {
+    background-color: white;
+    border-color: #444;
+    color: #074051;
+  }
+  
+  body[data-theme="dark"] .login-form button {
+    background-color: #F4A261; /* Laranja no tema escuro */
+    color: #074051;
+  }
+  
+  body[data-theme="dark"] .login-form button:hover:not(:disabled) {
+    background-color: #e68a4c; /* Tom mais claro de laranja */
+  }
+  
+  body[data-theme="dark"] .link {
+    color: #adb5bd; /* Cinza claro no tema escuro */
+  }
+  
+  body[data-theme="dark"] .link a {
+    color: #F4A261; /* Laranja no tema escuro */
+  }
+  
+  body[data-theme="dark"] .link a:hover {
+    color: #e68a4c; /* Tom mais claro de laranja */
+  }
+  
+  body[data-theme="dark"] .login-footer {
+    color: #adb5bd; /* Cinza claro no tema escuro */
+  }
+  
+  /* Responsividade */
+  @media (max-width: 480px) {
+    .login-title {
+      font-size: 2rem; /* Mesmo tamanho de AddPet em mobile */
     }
-
-    .terms,
-    .link {
-        font-size: 12px;
+  
+    .login-subtitle {
+      font-size: 1rem; /* Mesmo tamanho de subtítulos em mobile */
     }
-}
+  
+    .login-form {
+      padding: 20px;
+      gap: 15px;
+    }
+  
+    .login-form input,
+    .login-form button {
+      font-size: 0.9rem; /* Ajustado para mobile */
+    }
+  
+    .back-to-home,
+    .link,
+    .login-footer {
+      font-size: 0.9rem; /* Ajustado para mobile */
+    }
+  }

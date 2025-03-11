@@ -18,18 +18,16 @@ function Header() {
     const storedUserName = localStorage.getItem('userName');
 
     if (token && storedUserName) {
-      // Se o token e o nome estão no localStorage, usa diretamente
       setIsLoggedIn(true);
       setUserName(storedUserName);
     } else if (token) {
-      // Se há token mas não há nome, valida com o backend
       checkLoginStatus()
         .then((data) => {
           const name = data.name;
           if (name) {
             setUserName(name);
             setIsLoggedIn(true);
-            localStorage.setItem('userName', name); // Atualiza o localStorage
+            localStorage.setItem('userName', name);
           }
         })
         .catch((err) => {
@@ -44,10 +42,9 @@ function Header() {
     }
   };
 
-  // Esse effect vai ser executado apenas uma vez, no carregamento inicial.
   useEffect(() => {
     checkAuthStatus();
-  }, []); // A dependência vazia [] faz o efeito rodar apenas uma vez
+  }, []);
 
   useEffect(() => {
     document.body.setAttribute('data-theme', theme);
@@ -110,10 +107,11 @@ function Header() {
           <div className="d-flex align-items-center">
             <button
               type="button"
-              className="btn btn-outline-light me-3"
+              className="btn btn-outline-light me-3 theme-toggle-btn"
               onClick={toggleTheme}
+              aria-label="Alternar tema"
             >
-              {theme === 'light' ? 'Escuro' : 'Claro'}
+              <i className={theme === 'light' ? 'bi bi-sun' : 'bi bi-moon'}></i>
             </button>
             {isLoggedIn ? (
               <>
@@ -124,8 +122,8 @@ function Header() {
               </>
             ) : (
               <div className="d-none d-lg-block">
-                <Link to="/login" className="btn btn-primary me-2">Login</Link>
-                <Link to="/register" className="btn btn-primary">Cadastro</Link>
+                <Link to="/login" className="btn btn-primary me-2 login-btn">Login</Link>
+                <Link to="/register" className="btn btn-primary register-btn">Cadastro</Link>
               </div>
             )}
           </div>

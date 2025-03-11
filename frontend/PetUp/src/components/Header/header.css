@@ -1,58 +1,79 @@
+/* Estilo básico do header */
 .header {
-    background-color: #F4A261;
-  }
+  background-color: #F4A261;
+  font-weight: bold;
+}
 
-.nav{
-    color: black;
-    font-weight: 500;
-  }
+/* Estilo da navegação */
+.nav {
+  color: black;
+  font-weight: 500;
+}
 
-li:hover{
-    color: black;
-    font-weight: bold;
-  }
+/* Efeito hover nos itens da lista */
+li:hover {
+  color: black;
+  font-weight: bold;
+}
 
- a{
-    text-decoration: none;
-    color: black 
- }
-  .login-btn {
-    background-color: #074051;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-  }
+/* Estilo dos links */
+a {
+  text-decoration: none;
+  color: black;
+  transition: transform 0.4s ease-in-out, text-decoration 0.4s ease-in-out, color 0.4s ease-in-out; /* Aumentado para 0.4s e adicionado ease-in-out */
+}
 
-  .login-btn:hover {
-    background-color: black;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    transform: scale(1.05); /* Efeito de aumento no botão */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
-  }
- 
+/* Efeito hover nos links */
+a:hover {
 
-   /* Estilo para tema escuro */
-   body[data-theme="dark"] header {
-    background-color: black;  /* Cor mais escura para manter a identidade visual */
-    color: #f5f5f5;
-    font-weight: 500;
+  color: black;
+  transform: translateY(-6px); /* Efeito de subir 3px ao passar o mouse */
+}
 
-    &&
+/* Botão de login */
+.login-btn {
+  background-color: #074051;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out; /* Ajustado para 0.4s com ease-in-out */
+}
 
-    a{
-        color: #f5f5f5;
-    
-      }
+.login-btn:hover {
+  background-color: black;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  transform: scale(1.05); /* Efeito de aumento no botão */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
 
-      
+/* Estilo para tema escuro */
+body[data-theme="dark"] header {
+  background-color: #074051; /* Cor mais escura para manter a identidade visual */
+  color: #f5f5f5;
+  font-weight: 500;
+}
+
+body[data-theme="dark"] header a {
+  color: #f5f5f5;
+  transition: transform 0.4s ease-in-out, color 0.4s ease-in-out, font-weight 0.4s ease-in-out; /* Aumentado para 0.4s e adicionado ease-in-out */
+}
+
+body[data-theme="dark"] header a:hover {
+  font-weight: bold;
+  color: #f5f5f5;
+  transform: translateY(-6px); /* Mesmo efeito de subir no tema escuro */
+  text-decoration: underline #F4A261; /* Mantém a identidade visual com sublinhado laranja */
+}
+
+/* Responsividade (opcional, para evitar o efeito em mobile, se desejar) */
+@media (max-width: 768px) {
   a:hover {
-    font-weight: bold;
-    color: #f5f5f5;
+      transform: none; /* Remove o efeito de subir em dispositivos móveis */
   }
-  
-    
+
+  body[data-theme="dark"] header a:hover {
+      transform: none; /* Remove o efeito de subir em dispositivos móveis no tema escuro */
   }
-  
+}

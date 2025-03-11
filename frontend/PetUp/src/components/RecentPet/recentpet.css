@@ -1,29 +1,241 @@
 * {
-    
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
-
-.recent{
- background-color: #E0E0E0;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 /* Wrapper full-width para o fundo */
 .recent-wrapper {
+  width: 100%;
+  background-color: #ffffff; /* Fundo para tema claro */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Fundo para o tema escuro */
+body[data-theme="dark"] .recent-wrapper {
+  background-color: #121212; /* Fundo escuro */
+  color: #f5f5f5;
+}
+
+/* Tornando o fundo do section transparente para que o wrapper seja visível */
+section.recent {
+  background-color: transparent;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+}
+
+.recent-title {
+  font-size: 2.8rem; /* Mesmo tamanho de AddPet, Login, etc. */
+  font-weight: 700;
+  color: #074051; /* Azul escuro no tema claro */
+}
+
+.recent-subtitle {
+  font-size: 1.2rem; /* Mesmo tamanho de subtítulos */
+  color: #6c757d; /* Cinza consistente */
+  margin-bottom: 2rem;
+}
+
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card-img-top {
+  object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+}
+
+.card-title {
+  font-size: 1.5rem;
+  color: #074051; /* Azul escuro no tema claro */
+}
+
+.card-title-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.card-title-link:hover .card-title {
+  color: #052f3b; /* Tom mais escuro no hover */
+  text-decoration: underline;
+}
+
+.card-text {
+  font-size: 1rem;
+  color: #6c757d; /* Cinza consistente */
+}
+
+.btn-primary {
+  background-color: #074051;
+  border-color: #074051;
+  border-radius: 6px;
+  padding: 0.8rem 2rem;
+  font-size: 1.1rem; /* Mesmo tamanho de outros botões */
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  border-color: black;
+  transform: scale(1.05);
+}
+
+.btn-outline-primary {
+  border-color: #074051;
+  color: #074051;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+}
+
+.btn-outline-primary:hover {
+  background-color: #074051;
+  color: white;
+  transform: scale(1.05);
+}
+
+.loading-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.error-text {
+  font-size: 1.2rem;
+  color: #e63946;
+  background-color: rgba(230, 57, 70, 0.1);
+  padding: 10px;
+  border-radius: 6px;
+}
+
+.no-pets-text {
+  font-size: 1.2rem;
+  color: #6c757d;
+}
+
+.animate-pulse {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { opacity: 1; }
+  50% { opacity: 0.5; }
+  100% { opacity: 1; }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards;
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tema escuro */
+body[data-theme="dark"] .recent-title {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .recent-subtitle {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .card-title {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .card-title-link:hover .card-title {
+  color: #e68a4c; /* Tom mais claro de laranja no hover */
+}
+
+body[data-theme="dark"] .card-text {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .btn-primary {
+  background-color: #F4A261;
+  border-color: #F4A261;
+  color: #074051;
+}
+
+body[data-theme="dark"] .btn-primary:hover {
+  background-color: #e68a4c;
+  border-color: #e68a4c;
+}
+
+body[data-theme="dark"] .btn-outline-primary {
+  border-color: #F4A261;
+  color: #F4A261;
+}
+
+body[data-theme="dark"] .btn-outline-primary:hover {
+  background-color: #F4A261;
+  color: #074051;
+}
+
+body[data-theme="dark"] .loading-text {
+  color: #adb5bd;
+}
+
+body[data-theme="dark"] .error-text {
+  color: #e63946;
+}
+
+body[data-theme="dark"] .no-pets-text {
+  color: #adb5bd;
+}
+
+/* Responsividade */
+@media (max-width: 991px) {
+  .recent-title {
+    font-size: 2rem;
+  }
+
+  .recent-subtitle {
+    font-size: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.3rem;
+  }
+
+  .card-text {
+    font-size: 0.9rem;
+  }
+
+  .btn-primary {
+    padding: 0.6rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 767px) {
+  .col-lg-6 {
+    margin-bottom: 20px;
+  }
+
+  .card.flex-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .card.flex-row .ratio {
     width: 100%;
-    background-color: #ffffff; /* Fundo para tema claro */
-    transition: background-color 0.3s ease, color 0.3s ease;
+    margin-bottom: 10px;
   }
-  
-  /* Fundo para o tema escuro */
-  body[data-theme="dark"] .recent-wrapper {
-    background-color: #121212; /* Fundo escuro */
-    color: #f5f5f5;
-  }
-  
-  /* Tornando o fundo do section transparente para que o wrapper seja visível */
-  section.recent {
-    background-color: transparent;
-  }
-  
+}

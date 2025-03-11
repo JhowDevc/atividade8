@@ -29,8 +29,8 @@ return (
   <img className="hero-ims  float-start img-fluid" src={pet3} alt="Imagem 3" />
 </div>
     <div className="hero-buttons mt-5 ">
-      <button className="btn-primary py-2 px-3 ">Encontrei um Pet</button>
-      <button className="btn-primary py-2 px-3 mx-3">Procuro Meu Pet</button>
+      <a href="/encontre-pet"><button className="btn-primary py-2 px-3 ">Encontre Seu Pet</button></a>
+      <a href="/cadastra-pet"><button className="btn-primary py-2 px-3 mx-3">Procuro Meu Pet</button></a>
     </div>
   </div>
 

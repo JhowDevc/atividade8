@@ -83,8 +83,9 @@ const Home = () => {
     <>
       <Header /> {/* Remova isLoggedIn e userName como props */}
       <Banner />
-      <Search />
+      
       <HeroSection />
+      <Search />
       <RecentPet />
       <Footer />
     </>

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import { loginManual, loginWithGoogle, handleGoogleLoginCallback } from '../../services/api'; // Ajustado para subir dois níveis
+import { loginManual, loginWithGoogle, handleGoogleLoginCallback } from '../../services/api';
 import './style.css';
 
 const Login = () => {
@@ -45,18 +45,24 @@ const Login = () => {
 
   return (
     <div className="login">
-      <h1>Login</h1>
-      <form onSubmit={handleSubmit}>
+      <Link to="/" className="back-to-home animate-slide-in">
+        <i className="bi bi-arrow-left me-2"></i> Voltar para a Home
+      </Link>
+      <h1 className="login-title animate-slide-in">Bem-vindo ao PetUp</h1>
+      <p className="login-subtitle animate-slide-in">
+        Faça login para ajudar a reunir pets perdidos com seus tutores usando nossa IA inovadora!
+      </p>
+      <form onSubmit={handleSubmit} className="login-form animate-slide-in">
         <input
           type="email"
-          placeholder="E-mail"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Senha"
+          placeholder="Digite sua senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -68,13 +74,16 @@ const Login = () => {
           Login com Google
         </button>
       </form>
-      {error && <div className="error">{error}</div>}
-      <div className="link">
+      {error && <div className="error animate-slide-in">{error}</div>}
+      <div className="link animate-slide-in">
         <Link to="/forgot-password">Esqueceu a senha?</Link>
       </div>
-      <div className="link">
+      <div className="link animate-slide-in">
         Não tem conta? <Link to="/register">Cadastre-se</Link>
       </div>
+      <p className="login-footer animate-slide-in">
+        Junte-se à nossa missão de transformar vidas, uma patinha de cada vez.
+      </p>
     </div>
   );
 };

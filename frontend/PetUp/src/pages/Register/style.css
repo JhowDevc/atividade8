@@ -2,71 +2,243 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  height: 100vh;
-  background-color: #f5f5f5;
+  padding-top: 100px; /* Alinhado com Login */
+  min-height: 100vh;
+  background-color: #ffffff; /* Fundo claro padrão */
+  transition: background-color 0.3s ease;
 }
 
-.register h1 {
-  margin-bottom: 20px;
-  color: #333;
+.back-to-home {
+  font-size: 1.1rem; /* Mesmo tamanho dos botões */
+  color: #074051; /* Azul escuro no tema claro */
+  text-decoration: none;
+  margin-bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.3s ease, transform 0.3s ease;
 }
 
-.register form {
+.back-to-home:hover {
+  color: #052f3b; /* Tom mais escuro de azul */
+  transform: translateX(-5px); /* Efeito de mover para a esquerda */
+  text-decoration: underline;
+}
+
+.back-to-home i {
+  font-size: 1.2rem; /* Ícone um pouco maior */
+}
+
+.register-title {
+  font-size: 2.8rem; /* Mesmo tamanho de AddPet, Contact, Login */
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #074051; /* Azul escuro no tema claro */
+}
+
+.register-subtitle {
+  font-size: 1.2rem; /* Mesmo tamanho de subtítulos em outras páginas */
+  text-align: center;
+  color: #6c757d; /* Cinza consistente */
+  margin-bottom: 2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+.register-form {
   display: flex;
   flex-direction: column;
-  width: 300px;
+  gap: 20px;
+  padding: 30px;
+  border-radius: 15px; /* Bordas mais suaves, como Login */
+  max-width: 90%;
+  width: 400px; /* Mesmo tamanho de Login */
+  margin-bottom: 25px;
+  background-color: #F4A261; /* Fundo laranja, como Login */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
 }
 
-.register input {
-  margin-bottom: 10px;
-  padding: 10px;
-  border: 1px solid #ddd;
-  border-radius: 4px;
-  font-size: 16px;
+.register-form:hover {
+  transform: translateY(-5px); /* Efeito de elevação, como Login */
 }
 
-.register button {
-   background-color: #074051;
-      color: white;
-      border: none;
-      border-radius: 5px;
-      padding: 12px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
-
+.register-form input {
+  display: block;
+  border: 1px solid #ced4da; /* Borda cinza padrão */
+  border-radius: 30px; /* Mesmo estilo de Login */
+  height: 40px;
+  padding-left: 20px;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  background-color: white;
 }
 
-.register button:hover:not(:disabled) {
-      background-color: black;
-         transform: scale(1.05);
-         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-
+.register-form input:focus {
+  border-color: #074051;
+  box-shadow: 0 0 5px rgba(7, 64, 81, 0.3);
 }
 
-.register button:disabled {
-     background-color: #a1b5ba;
-      cursor: not-allowed;
-      transform: none;
-
+.register-form input:invalid:focus {
+  border-color: #e63946;
 }
 
-.register .error {
-  color: red;
+.register-form button {
+  background-color: #074051;
+  color: white;
+  border: none;
+  border-radius: 6px; /* Alinhado com outras páginas */
+  padding: 0.8rem; /* Mesmo tamanho de AddPet e Login */
+  font-size: 1.1rem; /* Mesmo tamanho de AddPet e Login */
+  cursor: pointer;
+  transition: background-color 0.4s ease-in-out, transform 0.4s ease-in-out, box-shadow 0.4s ease-in-out;
+}
+
+.register-form button:hover:not(:disabled) {
+  background-color: black;
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.register-form button:disabled {
+  background-color: #a1b5ba;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.link {
+  text-align: center;
+  font-size: 1rem; /* Ajustado para consistência */
+  color: #333;
   margin-top: 10px;
 }
 
-.register .link {
-  margin-top: 15px;
-  color: #666;
-}
-
-.register .link a {
-  color: #007bff;
+.link a {
+  color: #074051; /* Azul escuro no tema claro */
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.register .link a:hover {
+.link a:hover {
+  color: #052f3b; /* Tom mais escuro de azul */
   text-decoration: underline;
+}
+
+.error {
+  color: #e63946;
+  text-align: center;
+  margin-top: 10px;
+  font-size: 1rem; /* Ajustado para consistência */
+  background-color: rgba(230, 57, 70, 0.1);
+  padding: 8px;
+  border-radius: 6px;
+}
+
+.register-footer {
+  font-size: 1.2rem; /* Mesmo tamanho de subtítulos */
+  text-align: center;
+  color: #6c757d; /* Cinza consistente */
+  margin-top: 2rem;
+  max-width: 500px;
+  line-height: 1.6;
+}
+
+/* Animação de entrada */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.5s ease-out forwards; /* Mesmo efeito de outras páginas */
+}
+
+/* Tema escuro */
+body[data-theme="dark"] .register {
+  background-color: #121212; /* Fundo escuro */
+}
+
+body[data-theme="dark"] .back-to-home {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .back-to-home:hover {
+  color: #e68a4c; /* Tom mais claro de laranja */
+}
+
+body[data-theme="dark"] .register-title {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .register-subtitle {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .register-form {
+  background-color: #074051; /* Azul escuro no tema escuro */
+}
+
+body[data-theme="dark"] .register-form input {
+  background-color: white;
+  border-color: #444;
+  color: #074051;
+}
+
+body[data-theme="dark"] .register-form button {
+  background-color: #F4A261; /* Laranja no tema escuro */
+  color: #074051;
+}
+
+body[data-theme="dark"] .register-form button:hover:not(:disabled) {
+  background-color: #e68a4c; /* Tom mais claro de laranja */
+}
+
+body[data-theme="dark"] .link {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+body[data-theme="dark"] .link a {
+  color: #F4A261; /* Laranja no tema escuro */
+}
+
+body[data-theme="dark"] .link a:hover {
+  color: #e68a4c; /* Tom mais claro de laranja */
+}
+
+body[data-theme="dark"] .register-footer {
+  color: #adb5bd; /* Cinza claro no tema escuro */
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+  .register-title {
+    font-size: 2rem; /* Mesmo tamanho de AddPet e Login em mobile */
+  }
+
+  .register-subtitle {
+    font-size: 1rem; /* Mesmo tamanho de subtítulos em mobile */
+  }
+
+  .register-form {
+    padding: 20px;
+    gap: 15px;
+  }
+
+  .register-form input,
+  .register-form button {
+    font-size: 0.9rem; /* Ajustado para mobile */
+  }
+
+  .back-to-home,
+  .link,
+  .register-footer {
+    font-size: 0.9rem; /* Ajustado para mobile */
+  }
 }

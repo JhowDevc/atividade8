@@ -138,16 +138,16 @@ const About = () => {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center mt-5 bg-light py-5 rounded">
+        <div className="text-center mt-5 py-5 rounded">
           <h3 className="fw-bold">
             <i className="fas fa-question-circle me-2 text-primary"></i>Quer saber mais?
           </h3>
           <p className="text-muted mb-4">
             Entre em contato conosco e descubra como podemos ajudar!
           </p>
-          <button className="btn btn-primary btn-lg">
+         <a  href="/contato"> <button className="btn btn-primary btn-lg">
             <i className="fas fa-envelope me-2"></i>Entre em Contato
-          </button>
+          </button></a>
         </div>
       </div>
       <Footer />

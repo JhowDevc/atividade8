@@ -18,10 +18,10 @@ class Config:
         'host': 'petuptemporar1.mysql.dbaas.com.br',
         'database': 'petuptemporar1'
     }
-    CLIP_MODEL = 'ViT-L-14'  # Mudado para um modelo CLIP maior e mais preciso
+    CLIP_MODEL = 'ViT-L-14'
     CLIP_PRETRAINED = 'openai'
-    YOLO_MODEL = 'yolov8m-seg.pt'  # Mudado para um modelo YOLO médio, mais preciso
-    SIMILARITY_THRESHOLD = 0.88  # Ajustado para um valor intermediário, pode ser dinâmico
+    YOLO_MODEL = 'yolov8m-seg.pt'
+    SIMILARITY_THRESHOLD = 0.88
     HOST = '0.0.0.0'
     PORT = 5000
     DEBUG = True

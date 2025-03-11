@@ -22,12 +22,12 @@ const Register = () => {
         email,
         password,
       });
-      console.log('Resposta do backend:', response.data); // Adicionar log para depuração
-      const token = response.data; // O token é retornado como string
+      console.log('Resposta do backend:', response.data);
+      const token = response.data;
       localStorage.setItem('token', token);
       navigate('/dashboard');
     } catch (err) {
-      console.error('Erro ao registrar:', err); // Adicionar log para depuração
+      console.error('Erro ao registrar:', err);
       setError(err.response?.data || 'Erro ao registrar usuário');
     } finally {
       setLoading(false);
@@ -36,25 +36,31 @@ const Register = () => {
 
   return (
     <div className="register">
-      <h1>Cadastro</h1>
-      <form onSubmit={handleSubmit}>
+      <Link to="/" className="back-to-home animate-slide-in">
+        <i className="bi bi-arrow-left me-2"></i> Voltar para a Home
+      </Link>
+      <h1 className="register-title animate-slide-in">Crie sua conta no PetUp</h1>
+      <p className="register-subtitle animate-slide-in">
+        Cadastre-se e junte-se à nossa missão de reunir pets perdidos com seus tutores usando inteligência artificial!
+      </p>
+      <form onSubmit={handleSubmit} className="register-form animate-slide-in">
         <input
           type="text"
-          placeholder="Nome"
+          placeholder="Digite seu nome"
           value={name}
           onChange={(e) => setName(e.target.value)}
           required
         />
         <input
           type="email"
-          placeholder="E-mail"
+          placeholder="Digite seu e-mail"
           value={email}
           onChange={(e) => setEmail(e.target.value)}
           required
         />
         <input
           type="password"
-          placeholder="Senha"
+          placeholder="Crie uma senha"
           value={password}
           onChange={(e) => setPassword(e.target.value)}
           required
@@ -63,10 +69,13 @@ const Register = () => {
           {loading ? 'Carregando...' : 'Cadastrar'}
         </button>
       </form>
-      {error && <div className="error">{error}</div>}
-      <div className="link">
+      {error && <div className="error animate-slide-in">{error}</div>}
+      <div className="link animate-slide-in">
         Já tem conta? <Link to="/login">Faça login</Link>
       </div>
+      <p className="register-footer animate-slide-in">
+        Faça parte da mudança e ajude a transformar vidas, uma patinha de cada vez!
+      </p>
     </div>
   );
 };
